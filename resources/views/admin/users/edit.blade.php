@@ -3,6 +3,8 @@
 @section('content')
 	<h1>Edit User</h1>
 <div class="row">
+	
+
 	<div class="col-sm-3">
 		<img src="/codehacking/public/images/{{ $user->photo ? $user->photo->file : 'no-image.png' }}" class="img-responsive img-rounded">
 
@@ -39,7 +41,7 @@
 	</div>
 
 	<div class="form-group">
-		{!! Form::submit('Create User',['class'=>'btn btn-primary col-sm-6']) !!}
+		{!! Form::submit('Update User',['class'=>'btn btn-primary col-sm-6']) !!}
 	</div>
 
 	{!! Form::close() !!}
@@ -53,6 +55,7 @@
 	{!! Form::close() !!}
 
 </div>
+
 </div>
 <div class="row">
 	@include('includes.form_error')

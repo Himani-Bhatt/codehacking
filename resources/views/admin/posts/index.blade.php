@@ -22,8 +22,8 @@
 	      <tr>
 	        <td> {{ $post->id }} </td> 
           <td> <img src="/codehacking/public/images/{{ $post->photo ? $post->photo->file :'no-image.png' }}"  height="50"> </td>       
-         	<td> {{ $post->user->name }} </td>
-         	<td> {{ $post->category_id }} </td>         	
+         	<td><a href="{{ route('posts.edit',$post->id)}}">{{ $post->user->name }}</a>  </td>
+         	<td> {{ $post->category ? $post->category->name : 'uncategorized' }} </td>         	
 	        <td> {{ $post->title }} </td>
             <td> {{ $post->body }} </td> 
             <td> {{ $post->created_at->diffForhumans() }} </td>         
